@@ -1,5 +1,6 @@
 import { api } from '@/data/api'
 import { Case } from '@/data/types/case'
+import { Metadata } from 'next'
 
 interface ProcessProps {
   params: {
@@ -19,6 +20,14 @@ async function getProcess(cnj: string): Promise<Case> {
   return caseItem
 }
 
+export async function generateMetadata({
+  params,
+}: ProcessProps): Promise<Metadata> {
+  return {
+    title: `Processo nº ${params.cnj}`,
+  }
+}
+
 export default async function ProcessPage({ params }: ProcessProps) {
   const caseItem = await getProcess(params.cnj)
 
@@ -26,7 +35,7 @@ export default async function ProcessPage({ params }: ProcessProps) {
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
       <div className="col-span-6 row-span-6 flex flex-col gap-10">
         <h2>
-          Processo n. {caseItem.cnj} do {caseItem.court}
+          Processo nº {caseItem.cnj} do {caseItem.court}
         </h2>
         <div className="flex flex-col">
           <h4 className="rounded-se-lg rounded-ss-lg bg-zinc-900 border-b-4 border-zinc-950 p-4 font-semibold">

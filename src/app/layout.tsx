@@ -5,7 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Consulta Processual',
+  title: {
+    template: '%s | Consulta Processual',
+    default: 'Consulta Processual',
+  },
   description: 'Desafio Técnico',
 }
 
