@@ -1,18 +1,49 @@
-export default async function List() {
-  await new Promise((resolve) => setTimeout(resolve, 2000))
+import { api } from '@/data/api'
+import { Case } from '@/data/types/case'
+
+interface ProcessProps {
+  params: {
+    cnj: string
+  }
+}
+
+async function getProcess(cnj: string): Promise<Case> {
+  const response = await api(`/cases/${cnj}`, {
+    next: {
+      revalidate: 60 * 60,
+    },
+  })
+
+  const caseItem = await response.json()
+
+  return caseItem
+}
+
+export default async function ProcessPage({ params }: ProcessProps) {
+  const caseItem = await getProcess(params.cnj)
 
   return (
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
       <div className="col-span-6 row-span-6 flex flex-col gap-10">
-        <h2>Processo n. _____ do -nome-tribunal</h2>
+        <h2>
+          Processo n. {caseItem.cnj} do {caseItem.court}
+        </h2>
         <div className="flex flex-col">
           <h4 className="rounded-se-lg rounded-ss-lg bg-zinc-900 border-b-4 border-zinc-950 p-4 font-semibold">
             Movimentações
           </h4>
-          <div className="bg-zinc-400 border-b-4 border-zinc-950 text-zinc-950 p-4">
-            <p>Date</p>
-            <p>Detalhes</p>
-          </div>
+          {caseItem.movements.map((movement) => (
+            <div
+              key={movement.date.concat(movement.description)}
+              className="bg-zinc-400 border-b-4 border-zinc-950 text-zinc-950 p-4"
+            >
+              <p>
+                <span>{movement.date}</span>
+                <br />
+                {movement.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -24,12 +55,7 @@ export default async function List() {
             Detalhes do processo
           </h4>
           <div className="bg-zinc-400 border-b-4 border-zinc-950 text-zinc-950 p-4">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              commodi exercitationem consequuntur laborum ab dolorum quaerat,
-              aut velit corrupti dolores dolorem, eum, debitis itaque voluptatem
-              magni placeat minima et laboriosam.
-            </p>
+            <p>{caseItem.details}</p>
           </div>
         </div>
       </div>
@@ -40,8 +66,8 @@ export default async function List() {
         </h4>
         <div className="flex flex-col">
           <div className="bg-zinc-400 border-b-4 border-zinc-950 text-zinc-950 p-4">
-            <p>Pessoa - instituição</p>
-            <p>Tipo de envolvimento</p>
+            <p>Autor: {caseItem.parties.plaintiff}</p>
+            <p>Réu: {caseItem.parties.defendant}</p>
           </div>
         </div>
       </div>

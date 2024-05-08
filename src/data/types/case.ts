@@ -10,7 +10,7 @@ interface Movements {
 
 export interface Case {
   cnj: string
-  parties: Parties[]
+  parties: Parties
   court: string
   start: string
   movements: Movements[]
