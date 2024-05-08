@@ -1,13 +1,13 @@
 {
     "cases": [
         {
-            "case_number": "5001682-88.2020.8.13.0672",
+            "cnj": "5001682-88.2020.8.13.0672",
             "parties": {
                 "plaintiff": "João da Silva",
                 "defendant": "Maria Oliveira"
             },
-            "court_origin": "TJSP",
-            "start_date": "2020-01-15",
+            "court": "TJSP",
+            "start": "2020-01-15",
             "movements": [
                 {
                     "date": "2020-01-15",
@@ -22,16 +22,16 @@
                     "description": "Conciliação Realizada - Acordo Homologado"
                 }
             ],
-            "case_details": "Ação de Divórcio litigioso"
+            "details": "Ação de Divórcio litigioso"
         },
         {
-            "case_number": "8500235-12.2019.4.05.8000",
+            "cnj": "8500235-12.2019.4.05.8000",
             "parties": {
                 "plaintiff": "Pedro Almeida",
                 "defendant": "Carla Nunes"
             },
-            "court_origin": "TRF5",
-            "start_date": "2019-05-20",
+            "court": "TRF5",
+            "start": "2019-05-20",
             "movements": [
                 {
                     "date": "2019-05-20",
@@ -46,16 +46,16 @@
                     "description": "Sentença Proferida - Improcedente"
                 }
             ],
-            "case_details": "Ação de Indenização por Danos Morais"
+            "details": "Ação de Indenização por Danos Morais"
         },
         {
-            "case_number": "1002457-32.2021.5.15.0092",
+            "cnj": "1002457-32.2021.5.15.0092",
             "parties": {
                 "plaintiff": "Ana Santos",
                 "defendant": "José Silva"
             },
-            "court_origin": "TRT15",
-            "start_date": "2021-03-10",
+            "court": "TRT15",
+            "start": "2021-03-10",
             "movements": [
                 {
                     "date": "2021-03-10",
@@ -70,16 +70,16 @@
                     "description": "Audiência Realizada - Sem Acordo"
                 }
             ],
-            "case_details": "Reclamatória Trabalhista por Demissão Sem Justa Causa"
+            "details": "Reclamatória Trabalhista por Demissão Sem Justa Causa"
         },
         {
-            "case_number": "7203698-45.2022.2.04.0001",
+            "cnj": "7203698-45.2022.2.04.0001",
             "parties": {
                 "plaintiff": "Luiz Oliveira",
                 "defendant": "Mariana Costa"
             },
-            "court_origin": "TJAM",
-            "start_date": "2022-01-05",
+            "court": "TJAM",
+            "start": "2022-01-05",
             "movements": [
                 {
                     "date": "2022-01-05",
@@ -94,16 +94,16 @@
                     "description": "Conciliação Realizada - Acordo Homologado"
                 }
             ],
-            "case_details": "Ação de Divórcio Consensual"
+            "details": "Ação de Divórcio Consensual"
         },
         {
-            "case_number": "4200987-65.2023.6.01.0001",
+            "cnj": "4200987-65.2023.6.01.0001",
             "parties": {
                 "plaintiff": "Laura Oliveira",
                 "defendant": "Rafael Santos"
             },
-            "court_origin": "TRE-BA",
-            "start_date": "2023-07-20",
+            "court": "TRE-BA",
+            "start": "2023-07-20",
             "movements": [
                 {
                     "date": "2023-07-20",
@@ -118,16 +118,16 @@
                     "description": "Sentença Proferida - Procedente"
                 }
             ],
-            "case_details": "Ação de Impugnação ao Registro de Candidatura"
+            "details": "Ação de Impugnação ao Registro de Candidatura"
         },
         {
-            "case_number": "6301589-22.2024.4.02.0001",
+            "cnj": "6301589-22.2024.4.02.0001",
             "parties": {
                 "plaintiff": "Fernanda Souza",
                 "defendant": "Gabriel Lima"
             },
-            "court_origin": "TRF2",
-            "start_date": "2024-02-10",
+            "court": "TRF2",
+            "start": "2024-02-10",
             "movements": [
                 {
                     "date": "2024-02-10",
@@ -142,7 +142,7 @@
                     "description": "Sentença Proferida - Improcedente"
                 }
             ],
-            "case_details": "Ação de Indenização por Danos Materiais"
+            "details": "Ação de Indenização por Danos Materiais"
         }
     ]
 }

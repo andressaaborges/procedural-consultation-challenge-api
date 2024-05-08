@@ -9,10 +9,10 @@ interface Movements {
 }
 
 export interface Case {
-  case_number: string
+  cnj: string
   parties: Parties[]
-  court_origin: string
-  start_date: string
+  court: string
+  start: string
   movements: Movements[]
-  case_details: string
+  details: string
 }
