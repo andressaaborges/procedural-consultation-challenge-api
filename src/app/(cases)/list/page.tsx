@@ -2,7 +2,7 @@ export default async function List() {
   await new Promise((resolve) => setTimeout(resolve, 2000))
 
   return (
-    <div className="grid max-h-[660px] grid-cols-9 grid-rows-6 gap-6">
+    <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
       <div className="col-span-6 row-span-6 flex flex-col gap-10">
         <h2>Processo n. _____ do -nome-tribunal</h2>
         <div className="flex flex-col">
