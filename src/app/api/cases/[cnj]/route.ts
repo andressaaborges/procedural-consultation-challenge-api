@@ -1,10 +1,10 @@
-import { cnjRegexValidation } from '@/utils/validation'
 import data from '../data.json'
 import { z } from 'zod'
 
 export async function GET(_: Request, { params }: { params: { cnj: string } }) {
   await new Promise((resolve) => setTimeout(resolve, 1000))
 
+  const cnjRegexValidation = /^\d{7}-\d{2}\.\d{4}\.\d{1}\.\d{2}\.\d{4}$/
   const cnj = z
     .string()
     .refine((value) => cnjRegexValidation.test(value), {
