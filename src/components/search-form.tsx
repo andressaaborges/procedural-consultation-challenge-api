@@ -7,9 +7,9 @@ import { FormEvent } from 'react'
 export function SearchForm() {
   const router = useRouter()
 
-  function handleSearch(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
+  function handleSearch(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
     const data = Object.fromEntries(formData)
     const query = data.q
 
