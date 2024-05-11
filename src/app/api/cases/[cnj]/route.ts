@@ -16,7 +16,7 @@ export async function GET(_: Request, { params }: { params: { cnj: string } }) {
   if (!caseItem) {
     return Response.json(
       { message: 'Processo não encontrado!' },
-      { status: 400 },
+      { status: 404 },
     )
   }
 
