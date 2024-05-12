@@ -44,6 +44,10 @@
                 {
                     "date": "2019-07-10",
                     "description": "Sentença Proferida - Improcedente"
+                },
+                {
+                    "date": "2024-05-15",
+                    "description": "Agravo de Instrumento"
                 }
             ],
             "details": "Ação de Indenização por Danos Morais"
@@ -143,6 +147,30 @@
                 }
             ],
             "details": "Ação de Indenização por Danos Materiais"
+        },
+        {
+            "cnj": "2584613-46.3663.2.18.5632",
+            "parties": {
+                "plaintiff": "Eduardo Rodrigues",
+                "defendant": "Osvaldo Cruz de Oliveira"
+            },
+            "court": "TJSP",
+            "start": "2022-04-27",
+            "movements": [
+                {
+                    "date": "2022-04-27",
+                    "description": "Petição Inicial Protocolada"
+                },
+                {
+                    "date": "2022-05-21",
+                    "description": "Despacho do Juiz"
+                },
+                {
+                    "date": "2022-07-13",
+                    "description": "Sentença Proferida - Procedente"
+                }
+            ],
+            "details": "Caso envolvendo disputa de propriedade entre as partes, com decisão improcedente"
         }
     ]
 }
