@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Repositório Backend Desafio: Consulta Processual 
 
-## Getting Started
+### Endpoints da API
 
-First, run the development server:
+##### GET /api/cases
+
+- **Acesse**: https://procedural-consultation-challenge-api.vercel.app/api/cases
+- **Descrição**: Recupera uma lista de casos.
+- **Método**: GET
+- **Resposta**: 
+  - `200 OK`: Lista de casos.
+  - `404 Not Found`: Caso não encontrado.
+
+##### GET /api/cases/[cnj]
+
+- **Acesse**: https://procedural-consultation-challenge-api.vercel.app/api/cases/5001682-88.2020.8.13.0672
+- **Descrição**: Recupera detalhes de um caso específico.
+- **Método**: GET
+- **Parâmetros**: 
+  - `cnj`: Número CNJ do caso.
+- **Resposta**: 
+  - `200 OK`: Detalhes do caso.
+  - `404 Not Found`: Caso não
+
+ encontrado.
+
+##### GET /api/cases/tribunal/[court]
+
+- **Acesse**: https://procedural-consultation-challenge-api.vercel.app/api/cases/tribunal/TJSP
+- **Descrição**: Recupera detalhes de um caso específico.
+- **Método**: GET
+- **Parâmetros**: 
+  - `court`:  (Dinâmico) Filtra casos por tribunal.
+- **Resposta**: 
+  - `200 OK`: Detalhes do caso.
+  - `404 Not Found`: Caso não encontrado.
+  
+
+### Como Executar a API
+
+> **A API está deployada, então para realizar os testar da aplicação só necessita rodar o servidor do Frontend**
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/andressaaborges/procedural-consultation-challenge-api.git
+
+```
+
+2. Navegue até o diretório raiz do projeto e instale as dependências do projeto:
+   
+```bash
+npm install
+
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abra seu navegador e acesse http://localhost:3000.
+   
+Caso já tenha um servidor rodando, irá abrir em http://localhost:3001.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Andressa Borges** - Software Developer
